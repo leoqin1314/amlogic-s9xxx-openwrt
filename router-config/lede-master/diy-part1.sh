@@ -12,8 +12,11 @@
 
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-sed -i '$a src-git istore https://github.com/linkease/istore' feeds.conf.default
-
+#sed -i '$a src-git istore https://github.com/linkease/istore' feeds.conf.default
+sed -i '1i src-git store https://github.com/linkease/istore' feeds.conf.default
+sed -i '1i src-git third https://github.com/jjm2473/openwrt-third' feeds.conf.default
+sed -i '1i src-git nas https://github.com/linkease/nas-packages' feeds.conf.default
+sed -i '1i src-git nas_luci https://github.com/linkease/nas-packages-luci' feeds.conf.default
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
